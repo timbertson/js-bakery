@@ -2,7 +2,7 @@
 
 ... produces "baked" objects or functions. Initially, the purpose of this was because I believe Javascript's treatment of the `this` variable is atrocious, and I wanted to make it behave more like pretty much every OO language out there.
 
-Additionally, I've created a version of the bakery for use with [async.js](http://github.com/eligrey/async.js/tree/). The modifications made are detailed [in this blog post](http://gfxmonk.net/2010/01/12/making-sense-of-async-js.html).
+Additionally, I've created a version of the bakery for use with [async.js](http://github.com/eligrey/async.js/tree/). The modifications made are detailed [in this blog post](http://gfxmonk.net/2010/02/12/making-sense-of-async-js.html).
 
 
 # How it works
