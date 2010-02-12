@@ -1,0 +1,27 @@
+<html>
+<script src="bakery.js"></script>
+<script>
+  var Thing = function(id) {
+    this.identity = id;
+  }.BakeConstructor();
+
+  Thing.prototype.toString = function() {
+    return this.identity;
+  }
+
+  Thing.prototype.identify = function() {
+    return "I am a " + this + " thing!";
+  }
+
+  var obj = new Thing("sample");
+  var obj_identifier = obj.identify;
+
+  console.log(obj_identifier());
+  // normally this would output:
+  // "I am a [Object window] thing!"
+
+  // but since BakeConstructor() has been used, it will output:
+  // "I am a sample thing!"
+</script>
+</html>
+
