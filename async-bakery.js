@@ -30,13 +30,15 @@ function __bake_function(func, self) {
 
 Function.prototype.BakeConstructor = function() {
 	var constructor = this;
-	return function() {
+	var new_constructor = function() {
 		if(this === window) {
 			throw "Error: constructor called without using the `new` keyword";
 		}
 		var instance = constructor.apply(this, arguments) || this;
 		return __bake_instance(instance);
-	}
+	};
+	new_constructor.prototype = constructor.prototype;
+	return new_constructor;
 }
 
 Function.prototype.bake = function(self) {
